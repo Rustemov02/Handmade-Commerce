@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react'
+import './reset.css'
+import './index.css'
+
+import { Header } from './Header/Header'
+import Nav from './MainSection/Nav'
+import Categories from './Categories'
+import OrderNavigation from './OrderNavigation'
+import BestSeller from './BestSeller'
+import Register from './Register'
+import Services from './Services' 
+import { useDispatch } from 'react-redux'
+import { fillData } from './Redux/amiguSlice'
 
 function App() {
+  const dispatch = useDispatch()
+  
+  useEffect(()=>{
+    dispatch(fillData())    
+  })
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <Counter/>  */}
+      {/* <CrackMain /> */}
+
+      <Header />
+      <Nav />
+      <Categories />
+      <OrderNavigation />
+      {/* <BestSeller /> 
+      <Services />
+      <Register /> */}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

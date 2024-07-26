@@ -1,0 +1,22 @@
+https://rafiaein.github.io/waGGy/ 
+
+-- create special component for DATA
+-- solve rating degree
+-- redesign "Best Seller" section !!!
+-- Favorite icon has some problem
+-- visit FRAMER site
+-- Learn Redux Toolkit Query !!!
+-- You can add FAQ if you want
+
+--- https://tailwindui.com/components/ecommerce/components/promo-sections => just test it !
+-- https://tailwindui.com/components/preview   => this link perhaps would be useful
+
+
+Cart templates =>
+-- https://bootsnipp.com/snippets/y22W
+-- https://speckyboy.com/free-shopping-cart-css-javascript/
+
+
+
+FLYOUT MENUS => 
+-- https://tailwindui.com/components/marketing/elements/flyout-menus
