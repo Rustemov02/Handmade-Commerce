@@ -1,9 +1,10 @@
 import { Button, Typography, Rating } from '@mui/material'
 import { itemsData } from './ItemsData.jsx';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+// import FavoriteIcon from '@mui/icons-material/Favorite';
 import {  useDispatch } from 'react-redux';
 import { addToCart } from './Redux/amiguSlice.js';
 import { useState } from 'react';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 function Items(activeİndex) {
 
@@ -36,9 +37,9 @@ function Items(activeİndex) {
                             alignItems: 'center',
                             justifyContent: "center"
                         }}> Səbətə əlavə et </Button>
-                        {/* {data.cartStatus ? 'Əlavə edildi' : 'Səbətə əlavə et'} */}
-                        {/* {buttonStates[index]} */}
-                        <FavoriteIcon sx={{ cursor: 'pointer', fontSize: '20px', color: "black", border: 'solid gray 1px', borderRadius: '10px', padding: '18px 17px' }} />
+                        
+                        {/* <FavoriteIcon sx={{ cursor: 'pointer', fontSize: '20px', color: "black", border: 'solid gray 1px', borderRadius: '10px', padding: '18px 17px' }} /> */}
+                        {/* <FavoriteIcon className='curson-pointer text-xl'/> */}
                     </div>
                 </div>
             ))}

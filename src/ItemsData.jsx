@@ -19,6 +19,7 @@ const itemsData = [
         amount: 18,
         rating: 1,
         type: 'Heyvanlar',
+        quantity: 1
     },
     {
         id: 1,
@@ -27,6 +28,7 @@ const itemsData = [
         amount: 18,
         rating: 2,
         type: 'Heyvanlar',
+        quantity: 1
     },
     {
         id: 2,
@@ -35,6 +37,7 @@ const itemsData = [
         amount: 18,
         rating: 3,
         type: 'Heyvanlar',
+        quantity: 1
     },
     {
         id: 3,
@@ -43,6 +46,7 @@ const itemsData = [
         amount: 18,
         rating: 2,
         type: 'Heyvanlar',
+        quantity: 1
     },
     {
         id: 4,
@@ -51,6 +55,7 @@ const itemsData = [
         amount: 18,
         rating: 2,
         type: 'Heyvanlar',
+        quantity: 1
     }, {
         id: 5,
         name: "Amigurumi",
@@ -58,6 +63,7 @@ const itemsData = [
         amount: 18,
         rating: 2,
         type: 'Heyvanlar',
+        quantity: 1
     },
     {
         id: 6,
@@ -65,7 +71,8 @@ const itemsData = [
         img: min1,
         amount: 23,
         rating: 2,
-        type: 'Miniatür' 
+        type: 'Miniatür',
+        quantity: 1
     },
     {
         id: 7,
@@ -73,7 +80,8 @@ const itemsData = [
         img: min2,
         amount: 23,
         rating: 2,
-        type: 'Miniatür' 
+        type: 'Miniatür',
+        quantity: 1
     },
     {
         id: 8,
@@ -81,7 +89,8 @@ const itemsData = [
         img: min3,
         amount: 23,
         rating: 2,
-        type: 'Miniatür'
+        type: 'Miniatür',
+        quantity: 1
     },
     {
         id: 9,
@@ -89,7 +98,8 @@ const itemsData = [
         img: min4,
         amount: 23,
         rating: 2,
-        type: 'Miniatür'
+        type: 'Miniatür',
+        quantity: 1
     },
     {
         id: 10,
@@ -97,7 +107,8 @@ const itemsData = [
         img: min5,
         amount: 23,
         rating: 2,
-        type: 'Miniatür'
+        type: 'Miniatür',
+        quantity: 1
     },
 ]
 

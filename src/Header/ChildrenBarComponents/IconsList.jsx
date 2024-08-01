@@ -11,6 +11,8 @@ import Media from 'react-media';
 import { InputBase } from "@mui/material"
 import { useSelector, useDispatch } from 'react-redux';
 import { removeFromCart } from '../../Redux/amiguSlice';
+import { Link } from 'react-router-dom';
+
 
 
 export default function IconsList() {
@@ -78,7 +80,7 @@ export default function IconsList() {
 
                     <div className='w-full '>
                         {cart.map((item, index) => (
-                            <div className='flex flex-col'>
+                            <div className='flex flex-col' key={index}>
                                 <div key={index} className="w-full h-auto flex flex-row  items-center justify-between h-fit my-2">
 
                                     <img src={item.img} className='w-1/4 h-24 my-2 rounded-lg' />
@@ -96,16 +98,18 @@ export default function IconsList() {
                             {/* < Divider sx={{ height: 5, width: '90%', m: 1, color: 'red' }} orientation="horizontal" /> */}
 
                             <div className='text-2xl text-[#DEAD6F] flex flex-row justify-around w-full py-4'> <p className='text-sans'> Toplam Qiymət  </p><p>{totalAmount} AZN</p></div>
-                            <Button color='inherit' size='large' variant="contained" sx={{
-                                padding: "10px 35px",
-                                margin: "0 20px",
-                                fontSize: "18px",
-                                fontFamily: 'Chilanka',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: "center",
-                                backgroundColor : '#DEAD6F',  
-                            }}>Sifariş Et</Button>
+                            <Link to="/order" style={{ textDecoration: 'none' }}>
+                                <Button color='inherit' size='large' variant="contained" sx={{
+                                    padding: "10px 35px",
+                                    margin: "0 20px",
+                                    fontSize: "18px",
+                                    fontFamily: 'Chilanka',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: "center",
+                                    backgroundColor: '#DEAD6F',
+                                }}>Sifariş Et</Button>
+                            </Link>
                         </>
                     )
 

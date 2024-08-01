@@ -13,8 +13,8 @@ https://rafiaein.github.io/waGGy/
 
 
 Cart templates =>
--- https://bootsnipp.com/snippets/y22W
--- https://speckyboy.com/free-shopping-cart-css-javascript/
+--https://speckyboy.com/free-shopping-cart-css-javascript/
+
 
 
 

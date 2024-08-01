@@ -8,30 +8,28 @@ import Categories from './Categories'
 import OrderNavigation from './OrderNavigation'
 import BestSeller from './BestSeller'
 import Register from './Register'
-import Services from './Services' 
+import Services from './Services'
 import { useDispatch } from 'react-redux'
 import { fillData } from './Redux/amiguSlice'
 
+
 function App() {
   const dispatch = useDispatch()
-  
-  useEffect(()=>{
-    dispatch(fillData())    
+
+  useEffect(() => {
+    dispatch(fillData())
   })
 
 
   return (
     <div>
-      {/* <Counter/>  */}
-      {/* <CrackMain /> */}
-
       <Header />
       <Nav />
       <Categories />
       <OrderNavigation />
-      {/* <BestSeller /> 
+      <BestSeller />
       <Services />
-      <Register /> */}
+      <Register />
     </div>
   )
 }

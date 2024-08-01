@@ -17,14 +17,26 @@ export const amiguSlice = createSlice({
         const newCart = [...state.cart, payload]
         state.cart = newCart
       }
-    }, 
+    },
     removeFromCart: (state, { payload }) => {
-      state.cart = state.cart.filter(item => item.id !== payload) 
+      state.cart = state.cart.filter(item => item.id !== payload)
+    },
+    incrementQuantity: (state, { payload }) => {
+      const item = state.cart.find(item => item.id === payload)
+      if (item) { 
+        item.quantity += 1
+      }
+    },
+    decrementQuantity : (state , {payload}) => {
+      const item = state.cart.find(item => item.id === payload)
+      if(item && item.quantity > 1){
+        item.quantity -= 1
+      }
     }
   }
 })
 
 
-export const { fillData,  addToCart, removeFromCart } = amiguSlice.actions
+export const { fillData, addToCart, removeFromCart, incrementQuantity , decrementQuantity } = amiguSlice.actions
 
 export default amiguSlice.reducer
