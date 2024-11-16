@@ -12,7 +12,7 @@ const data = [{
     name: 'Örtüklər',
     icon: dog,
 }, {
-    id: 2,
+    id: 2,  
     name: 'Miniatür',
     icon: dog,
 }, {
@@ -23,12 +23,12 @@ const data = [{
 
 function Categories() {
 
-    return (
-        <div className='defaultDisplayStyle' style={{ flexDirection: 'row', justifyContent: "space-evenly", flexWrap: "wrap", margin: "70px 12px" }}>
+    return ( 
+        <div className='flex flex-row justify-center gap-1 flex-wrap items-center mx-[70px] my-[12px]' >
             {data.map(item => (
-                <div className='defaultDisplayStyle' key={item.id} style={{cursor : 'pointer', height: '180px', width: '15%', minWidth: '150px', flexDirection: "column", justifyContent: 'space-between'}}>
-                    <img src={item.icon} className='colorStyle' style={{ width: "120px"}} />
-                    <Typography sx={{ textAlign: 'center', padding: "2px 4px", fontWeight: "500", fontFamily: "Chilanka", fontSize: '20px' }}>{item.name}</Typography>
+                <div className='flex flex-col justify-center items-center cursor-pointer h-[180px] w-1/5 min-w-[100px]' key={item.id} >
+                    <img src={item.icon} className='w-[80px]' />
+                    <Typography className='text-center px-2 py-4 h-[60px]' sx={{ fontWeight: "500", fontFamily: "Chilanka", fontSize: '15px'}}>{item.name}</Typography>
                 </div>
             ))}
         </div>

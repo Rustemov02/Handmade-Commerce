@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { itemsData } from '../ItemsData'
-
+import animal1 from '../images/animal-1.jpg'
 
 export const amiguSlice = createSlice({
   name: 'amigurumi',
@@ -23,13 +23,13 @@ export const amiguSlice = createSlice({
     },
     incrementQuantity: (state, { payload }) => {
       const item = state.cart.find(item => item.id === payload)
-      if (item) { 
+      if (item) {
         item.quantity += 1
       }
     },
-    decrementQuantity : (state , {payload}) => {
+    decrementQuantity: (state, { payload }) => {
       const item = state.cart.find(item => item.id === payload)
-      if(item && item.quantity > 1){
+      if (item && item.quantity > 1) {
         item.quantity -= 1
       }
     }
@@ -37,6 +37,6 @@ export const amiguSlice = createSlice({
 })
 
 
-export const { fillData, addToCart, removeFromCart, incrementQuantity , decrementQuantity } = amiguSlice.actions
+export const { fillData, addToCart, removeFromCart, incrementQuantity, decrementQuantity } = amiguSlice.actions
 
 export default amiguSlice.reducer

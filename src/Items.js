@@ -1,53 +1,65 @@
-import { Button, Typography, Rating } from '@mui/material'
-import { itemsData } from './ItemsData.jsx';
-// import FavoriteIcon from '@mui/icons-material/Favorite';
-import {  useDispatch } from 'react-redux';
-import { addToCart } from './Redux/amiguSlice.js';
-import { useState } from 'react';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import { Typography, Rating } from "@mui/material";
+import { itemsData } from "./ItemsData.jsx";
+import { useDispatch } from "react-redux";
+import { addToCart } from "./Redux/amiguSlice.js";
+import { useState } from "react";
+import { Snackbar, Alert } from "@mui/material";
 
 function Items(activeİndex) {
+  const dispatch = useDispatch();
+  const [open, setOpen] = useState(false);
 
-    const dispatch = useDispatch() 
- 
+  return (
+    <div className="w-[90%] m-auto px-[20px] flex flex-row items-center justify-center lg:justify-start flex-wrap">
+      {itemsData
+        .filter((item) => item.type == activeİndex.index)
+        .map((stuf) => (
+          <div
+            key={stuf.id}
+            className="m-[25px] flex flex-col justify-center items-start"
+          >
+            <img
+              src={stuf.img}
+              className="w-[170px] min-w-[150px] h-[200px] rounded-2xl"
+            />
+            <p className="text-2xl my-2">{stuf.name}</p>
+            <Rating
+              sx={{ color: "#DEAD6F" }}
+              name="simple-controlled"
+              value={stuf.rating}
+            />
+            <Typography fontSize={24} fontFamily={"Montserrat"} color="#DEAD6F">
+              ${stuf.amount}
+            </Typography>
+            <div className="flex flex-col justify-start gap-10">
+              <button
+                onClick={() => {
+                  dispatch(addToCart(stuf));
+                  setOpen(false);
+                  setOpen(true);
+                  setTimeout(() => {
+                    setOpen(false);
+                  }, 500);
+                }}  
+              type="button" className="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-lg px-3 py-1.5 text-center me-2 mb-2"
+              >
+                Səbətə əlavə et
+              </button>
 
-    return (
-        <div style={{ width: '90%', margin: "auto", padding: '20px 0', display: "flex", flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly', flexWrap: 'wrap' }}>
-
-            {itemsData.filter(item => item.type == activeİndex.index).map((stuf, index) => (
-
-                <div key={stuf.id} style={{ margin: "25px" }}>
-                    <img src={stuf.img} style={{ width: '100%', minWidth: '250px', height: '300px', borderRadius: '20px' }} />
-                    <Typography fontFamily={'Chilanka'} fontSize={32}>{stuf.name}</Typography >
-                    <Rating
-                        sx={{ color: "#DEAD6F" }}
-                        name="simple-controlled"
-                        value={stuf.rating}
-                    />
-                    <Typography fontSize={32} fontFamily={'Montserrat'} color='#DEAD6F'>${stuf.amount} </Typography>
-                    <div className='defaultDisplayStyle' style={{ justifyContent: 'flex-start', gap: 10 }}>
-                        <Button onClick={() => { 
-                            dispatch(addToCart(stuf)) 
-                        }} color='inherit' size='large' variant="outlined" sx={{
-                            minWidth: '170px',
-                            padding: "12px 22px",
-                            fontSize: '20px',
-                            fontFamily: 'Chilanka',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: "center"
-                        }}> Səbətə əlavə et </Button>
-                        
-                        {/* <FavoriteIcon sx={{ cursor: 'pointer', fontSize: '20px', color: "black", border: 'solid gray 1px', borderRadius: '10px', padding: '18px 17px' }} /> */}
-                        {/* <FavoriteIcon className='curson-pointer text-xl'/> */}
-                    </div>
-                </div>
-            ))}
-
-
-
-        </div>
-    )
+              <Snackbar open={open} autoHideDuration={3000}>
+                <Alert
+                  severity="success"
+                  variant="filled"
+                  sx={{ width: "100%" }}
+                >
+                  Səbətə əlavə edildi !
+                </Alert>
+              </Snackbar>
+            </div>
+          </div>
+        ))}
+    </div>
+  );
 }
 
-export default Items
+export default Items;

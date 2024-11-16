@@ -7,11 +7,10 @@ function Services() {
     const iconStyle = {
         border: 'solid gray 1px',
         borderRadius: "100%",
-        width: '70px',
-        height: "70px",
+        width: '60px',
+        height: "60px",
         padding: '10px',
-        margin : '10px 0',
-        fontSize: "30px",
+        margin : '10px 0', 
         color: '#DEAD6F'
     }
 
@@ -28,7 +27,7 @@ function Services() {
         },
         {
             icon: <WorkspacePremiumIcon style={iconStyle} />,
-            title: 'Keyfiyyət Standartları ',
+            title: 'Keyfiyyət Standartları',
             explain: "Məhsulların keyfiyyəti və güvənliliyi müştərilərə təmin edilir"
         },
         {
@@ -41,12 +40,12 @@ function Services() {
 
 
 return (
-    <div className=' h-120 w-full m-auto flex flex-row aling-center justify-evenly flex-wrap'>
+    <div className='h-120 w-full m-auto flex flex-row aling-center justify-evenly flex-wrap py-10'>
         {data.map((item,index) => (
-            <div key={index} className='w-1/5 min-w-48 my-3 flex flex-col items-start'>
+            <div key={index} className='w-1/5 min-w-48 my-3 flex flex-col items-center lg:items-start justify-around p-1'>
                 {item.icon}
-                <h3 className='text-2xl font-chilanka my-2'>{item.title}</h3>
-                <p>{item.explain}</p>
+                <h3 className='text-xl font-chilanka my-2 text-center lg:text-start'>{item.title}</h3>
+                <p className='text-center lg:text-start'>{item.explain}</p>
             </div>
         ))}
     </div>

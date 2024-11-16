@@ -1,45 +1,51 @@
-import { Typography, Button } from '@mui/material'
-import banner from '../images/banner-img.png'
-import '../mediaQuery.css'
-import Media from 'react-media'
+import { Typography, Button } from "@mui/material";
+import banner from "../images/banner-img.png";
+import "../mediaQuery.css";
+import Media from "react-media";
+import amiWallpaper from "../images/wallpaper.jpg";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 function Nav() {
+  const handleScroll = () => {
+    const targetSection = document.getElementById("categories-section");
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-    return (
-        <Media query="(min-width: 750px)">
-            {matches => (
-                <div style={{
-                    height: 'auto',
-                    width: '100%',
-                    backgroundColor: "#F9F3EC",
-                    display: 'flex',
-                    alignItems: 'center', 
-                    justifyContent : 'center',
-                    flexDirection: matches ? 'row' : 'column',
-                }}>
+  return (
+    <div className="relative h-screen min-h-screen overflow-hidden">
+      <div
+        style={{ backgroundImage: `url(${amiWallpaper})` }}
+        className="relative h-[100%] bg-cover bg-center bg-fixed w-full flex flex-col justify-center  items-center"
+      >
+        <div className="absolute inset-0 backdrop-blur-sm bg-black/15"></div>
 
-                        <img style={{ width: '40%', minWidth: '250px' ,height : "50%"  }} src={banner} />
+        <div className="z-10 flex flex-col justify-center items-center p-5">
+          <p className="text-white text-5xl font-medium text-center fontFamily: 'Montserrat ,  cursive' ">
+            BİR İLMƏK
+          </p>
+          <p className="text-white text-xl text-center">
+            Sevginin naxışlandığı ilməklər
+          </p>
+        </div>
 
-                    <div style={{ width: 'fit-content' ,minWidth : '100px', padding : '12px 0'  }}>
-                        <Typography fontSize={60} fontFamily='Chilanka' sx={{padding : '0 20px' }}>Best Destina For <span style={{ color: '#DEAD6F' }}>Your Pets</span></Typography>
-                        <Button color='inherit' size='large' variant="outlined" sx={{
-                            padding: "10px 35px",
-                            margin : "0 20px",
-                            fontSize: "18px",
-                            fontFamily: 'Chilanka',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: "center",
-                        }}>Shop Now</Button>
-                    </div>
-
-                </div >
-            )}
-
-        </Media>
-    )
+        <KeyboardArrowDownIcon
+          onClick={handleScroll}
+          style={{
+            zIndex: 10,
+            fontSize: "55px",
+            color: "white",
+            marginTop: "40px",
+            border: "solid white 2px",
+            borderRadius: "50px",
+            cursor : 'pointer'
+          }}
+          className="animate-bounce"
+        />
+      </div>
+    </div>
+  );
 }
 
-
-
-export default Nav
+export default Nav;

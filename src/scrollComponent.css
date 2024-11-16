@@ -1,0 +1,12 @@
+.fade-in {
+    opacity: 0;
+    /* transform: translateY(20px); */
+    animation: fadeIn 0.5s forwards; /* 0.5 saniyelik bir animasyon ile */
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      /* transform: translateY(0); */
+    }
+  }

@@ -17,16 +17,16 @@ function OrderNavigation() {
     }
 
     return (
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <div id='categories-section' className="flex flex-col justify-center py-10 bg-[#faf3eb]">
 
             <div className="defaultDisplayStyle" style={{
                 justifyContent: "space-around",
                 flexDirection: "row",
-                flexWrap: 'wrap',
+                flexWrap: 'wrap', 
             }}>
-                <Typography sx={{ fontFamily: 'Chilanka', fontSize: "50px", height: '50px', width: 'fit-content' }}>Məhsullar</Typography>
+                <p className="text-5xl h-[50px] text-center">Məhsullar</p>
 
-                <div style={{ display: "flex", flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', margin: '10px 0' }}>
+                {/* <div className="flex flex-row flex-wrap justify-center mx-[10px]">
                     {list.map((item, index) => (
                         <Button key={index} onClick={() => handleClick(index)} sx={{
                             fontSize: "18px",
@@ -39,10 +39,10 @@ function OrderNavigation() {
                             color: activeIndex === index ? activeColor : 'black'
                         }}>{item}</p></Button>
                     ))}
-                </div>
+                </div> */}
 
 
-                <div style={{ width: 'fit-content', minWidth: '100px', padding: '12px 0' }}>
+                {/* <div style={{ width: 'fit-content', minWidth: '100px', padding: '12px 0' , border : "solid red 1px"}}>
                     <Button color='inherit' size='large' variant="outlined" sx={{
                         minWidth: '170px',
                         padding: "10px 35px",
@@ -53,7 +53,7 @@ function OrderNavigation() {
                         alignItems: 'center',
                         justifyContent: "center",
                     }}>Sifariş et</Button>
-                </div>
+                </div> */}
 
             </div>
 

@@ -5,6 +5,8 @@
     justify-content: space-evenly;
     /* border: solid red 1px; */
 } 
+
+
 @media (max-width: 1200px) {
     .none1200 {
         display: none;

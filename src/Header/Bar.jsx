@@ -6,14 +6,14 @@ import TogglerIcon from './ChildrenBarComponents/TogglerIcon';
 export default function Bar() {
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'row', alignItems: "center", justifyContent: 'space-around', }}>
+        <div style={{ display: 'flex', flexDirection: 'row', alignItems: "center", justifyContent: 'space-around' }}>
 
-            <MultipleSelect />
-            <MenuList />
-            <IconsList />
+            {/* <MultipleSelect /> */}
+            {/* <MenuList /> */}
 
 
-            <TogglerIcon />
+            <IconsList /> 
+            {/* <TogglerIcon />  */}
 
         </div>
     )

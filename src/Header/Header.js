@@ -16,20 +16,18 @@ const contactItems = {
 export function Header() {
 
     return (
-        <div>
+        <div className='border-2'>
             {/* FIrst Header */}
-            <div style={{ paddingTop: 15, width: '100%', display: 'flex', justifyContent: "space-around", flexDirection: "row", alignItems: "center" }}>
+            <div style={{ paddingTop: 15, width: '100%', display: 'flex', justifyContent: "space-around", flexDirection: "row", alignItems: "center"}}>
 
-                <Logo style={{ border: "solid red 1px", width: '30%' }} />
+                <Logo style={{ border: "solid red 1px", width: '20%' }} />
 
-                {/* Search Area */}
                 <Media query='(max-width : 990px)'>
                     {() => {
-                        return <Search/>
+                        return <Search />
                     }}
-                {/* <Search/> */}
                 </Media>
-                  
+
                 {/* Contact area */}
                 <div className='none1200 contactArea' >
 
