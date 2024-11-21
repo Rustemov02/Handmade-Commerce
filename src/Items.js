@@ -20,7 +20,7 @@ function Items() {
           >
             <img
               src={stuf.img}
-              className="w-[170px] min-w-[150px] h-[200px] rounded-2xl"
+              className="w-[240px] min-w-[150px] h-[300px] rounded-2xl"
             />
             <p className="text-2xl my-2">{stuf.name}</p>
             <div className="w-3/2 flex flex-row justify-between items-center">
