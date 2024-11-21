@@ -1,18 +1,18 @@
 https://rafiaein.github.io/waGGy/ 
 
 
--- add search function on top of site
--- redesign category buttons // heyvanlar , minatur etc.
--- redesign 'Sifaris et' buttons
+-- add search function on top of site -- rejected !
+-- redesign category buttons // heyvanlar , minatur etc.  -- rejected !
+-- redesign 'Sifaris et' buttons ++ 
 -- 
 ------------------------------------
--- create special component for DATA
+-- create special component for DATA ++ 
 -- solve rating degree
--- redesign "Best Seller" section !!!
--- Favorite icon has some problem
--- visit FRAMER site
+-- redesign "Best Seller" section !!! -- rejected !
+-- Favorite icon has some problem -- rejected !
+-- visit FRAMER site ++ 
 -- Learn Redux Toolkit Query !!!
--- You can add FAQ if you want
+-- You can add FAQ if you want -- rejected !
 
 --- https://tailwindui.com/components/ecommerce/components/promo-sections => just test it !
 -- https://tailwindui.com/components/preview   => this link perhaps would be useful
@@ -26,3 +26,9 @@ Cart templates =>
 
 FLYOUT MENUS => 
 -- https://tailwindui.com/components/marketing/elements/flyout-menus
+
+
+
+
+
+

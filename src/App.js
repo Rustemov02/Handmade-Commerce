@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, lazy, Suspense } from "react";
 import "./reset.css";
 import "./index.css";
 
@@ -13,27 +13,46 @@ import { useDispatch } from "react-redux";
 import { fillData } from "./Redux/amiguSlice";
 import Bar from "./Header/Bar";
 import Footer from "./Footer";
+import { Mosaic } from "react-loading-indicators";
 
 function App() {
-  const dispatch = useDispatch(); 
+  const dispatch = useDispatch();
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    dispatch(fillData());
- 
-  }, []);
+    dispatch(fillData()); 
+
+
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 1000); 
+  }, [isLoaded]);
 
   return (
-    <div>
-      {/* <Header /> */}
-      <Bar />
-      <Nav />
-      <OrderNavigation />
-      {/* <BestSeller /> */}
-      {/* <Categories /> */}
-      <Services />
-      <Register />
-      <Footer/>
-    </div>
+    <>
+      {isLoaded ? (
+        <div>
+          {/* <Header /> */}
+          <Bar />
+          <Nav />
+          <OrderNavigation />
+          {/* <BestSeller /> */}
+          {/* <Categories /> */}
+          <Services />
+          <Register />
+          <Footer />
+        </div>
+      ) : (
+        <div className="flex justify-center items-center h-screen">
+          <Mosaic
+            color="#c3922f"
+            size="large"
+            text="Loading..."
+            textColor="#c79827"
+          />
+        </div>
+      )}
+    </>
   );
 }
 

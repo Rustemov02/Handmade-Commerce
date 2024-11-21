@@ -36,6 +36,11 @@ export default function IconsList() {
     setOpenList(newOpen);
   };
 
+  //SCROLLING TOP OF SCREEN
+  const handleScroll = () => { 
+    window.scrollTo(0,0)
+  }
+
 //   const toggleDrawerSearch = (newOpen) => {
 //     setOpenSearch(newOpen);
 //   };
@@ -158,7 +163,7 @@ export default function IconsList() {
                 <p className="text-sans"> Toplam Qiymət : </p>
                 <p>{totalAmount} AZN</p>
               </div>
-              <Link to="/order" style={{ textDecoration: "none" }}>
+              <Link to="/order" onClick={handleScroll} style={{ textDecoration: "none" }}>
                 <button
                   type="button"
                   className="text-gray-900 bg-[#F7BE38] hover:bg-[#F7BE38]/90 focus:ring-4 focus:outline-none focus:ring-[#F7BE38]/50 font-medium rounded-lg text-xl px-5 py-2.5 text-center flex flex-row items-start dark:focus:ring-[#F7BE38]/50 me-2 mb-2"

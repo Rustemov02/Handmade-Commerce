@@ -1,16 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { itemsData } from '../ItemsData'
-import animal1 from '../images/animal-1.jpg'
+import { itemsData } from '../ItemsData' 
 
 export const amiguSlice = createSlice({
   name: 'amigurumi',
   initialState: {
     data: [],
     cart: [],
+    personalİnformation : {customerName : '' , connectWith : "" , location : '' , note : ''},
+    permission : false ,//for sending email , if some inputs was empty , permission getting false 
+    delivery : 0 // for delivery amount
   },
+
   reducers: {
     fillData: state => {
-      state.data = [...itemsData] //cart filled !
+      state.data = [...itemsData] //cart filled ! 
     },
     addToCart: (state, { payload }) => {
       if (!state.cart.some(item => item.id === payload.id)) {
@@ -32,11 +35,27 @@ export const amiguSlice = createSlice({
       if (item && item.quantity > 1) {
         item.quantity -= 1
       }
+    },
+    getPersonalInformations : (state , {payload}) => {
+       state.personalInformation = {
+        ...state.personalInformation ,
+        ...payload
+       } 
+    },
+    getPermission : (state , {payload}) => { 
+      state.permission = payload
+    },
+    addDelivery : (state , {payload}) => {
+      if(payload){
+        state.delivery = 2 
+      }else{
+        state.delivery = 0
+      } 
     }
   }
 })
 
 
-export const { fillData, addToCart, removeFromCart, incrementQuantity, decrementQuantity } = amiguSlice.actions
+export const { fillData, addToCart, removeFromCart, incrementQuantity, decrementQuantity , getPersonalInformations , getPermission , addDelivery } = amiguSlice.actions
 
 export default amiguSlice.reducer
