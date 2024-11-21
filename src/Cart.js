@@ -21,6 +21,7 @@ function Cart() {
   const delivery = useSelector((state) => state.amigurumi.delivery);
   const [open, setOpen] = useState(false); //for Dialog component !
   const [lazyOpen, setLazyOpen] = useState(false);
+
   const personalInformation = useSelector(
     (state) => state.amigurumi.personalInformation
   );
@@ -182,7 +183,7 @@ function Cart() {
                 </button>
               </Link>
             )}
-      <PersonalInformation />
+            {cart.length !== 0 && <PersonalInformation />}
             {/* TOTAL PRICE */}
             {subTotal !== 0 && (
               <div>
@@ -209,8 +210,6 @@ function Cart() {
                     </div>
                   </div>
                 </div>
-
-              
 
                 {/* ORDER BUTTON */}
                 <button

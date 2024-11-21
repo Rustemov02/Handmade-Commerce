@@ -1,12 +1,12 @@
 import { Typography, Rating } from "@mui/material";
 import { itemsData } from "./ItemsData.jsx";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "./Redux/amiguSlice.js";
 import { useState } from "react";
 import { Snackbar, Alert } from "@mui/material";
 
 function Items() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); 
   const [open, setOpen] = useState(false);
    
   return (
