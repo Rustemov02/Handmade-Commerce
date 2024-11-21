@@ -42,7 +42,7 @@ function Services() {
 return (
     <div className='h-120 w-full m-auto flex flex-row aling-center justify-evenly flex-wrap py-10'>
         {data.map((item,index) => (
-            <div key={index} className='w-1/5 min-w-48 my-3 flex flex-col items-center lg:items-start justify-around p-1'>
+            <div key={index} className='w-1/5 min-w-56 my-3 flex flex-col items-center lg:items-start justify-around p-1'>
                 {item.icon}
                 <h3 className='text-xl font-chilanka my-2 text-center lg:text-start'>{item.title}</h3>
                 <p className='text-center lg:text-start'>{item.explain}</p>
