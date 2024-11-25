@@ -4,7 +4,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 function Footer() {
   return (
-    <div className="h-[400px] flex flex-col">
+    <div className="h-[300px] flex flex-col justify-center">
       <div className="mt-10">
         <img src={ilmekSvg} className="w-[120px] m-auto" />
 

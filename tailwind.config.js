@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend : {
       fontFamily: { 
-        sans : ['Chilanka']
+        roboto : ['Roboto'],
+        merri : ["Merriweather"]
       } 
     }
   },

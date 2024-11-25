@@ -22,7 +22,7 @@ function Nav() {
         {/* <div className="absolute inset-0 backdrop-blur-sm bg-black/30"></div> */}
 
         <div className="fade-in flex flex-col justify-evenly items-center py-10 w-full bg-white/70 backdrop-blur-md">
-          <p className="text-black text-5xl lg:text-8xl font-medium text-center font-sans">
+          <p className="text-black text-5xl lg:text-8xl text-center font-merri">
             BİR İLMƏK
           </p>
           <p className="text-black text-xl lg:text-3xl text-center font-sans">
