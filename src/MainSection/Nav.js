@@ -2,7 +2,7 @@ import { Typography, Button } from "@mui/material";
 import banner from "../images/banner-img.png";
 import "../mediaQuery.css";
 import Media from "react-media";
-import amiWallpaper from "../images/wallpaper.jpg";
+import amiWallpaper from "../images/wall_LE.jpeg";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 function Nav() {
@@ -19,13 +19,13 @@ function Nav() {
         style={{ backgroundImage: `url(${amiWallpaper})` }}
         className="relative h-[100%] bg-cover bg-center bg-fixed w-full flex flex-col justify-center  items-center"
       >
-        <div className="absolute inset-0 backdrop-blur-sm bg-black/15"></div>
+        <div className="absolute inset-0 backdrop-blur-sm bg-black/30"></div>
 
         <div className="z-10 flex flex-col justify-center items-center p-5">
-          <p className="text-white text-5xl font-medium text-center fontFamily: 'Montserrat ,  cursive' ">
+          <p className="text-white text-5xl lg:text-8xl font-medium text-center fontFamily: 'Montserrat ,  cursive' ">
             BİR İLMƏK
           </p>
-          <p className="text-white text-xl text-center">
+          <p className="text-white text-xl lg:text-3xl text-center">
             Sevginin naxışlandığı ilməklər
           </p>
         </div>

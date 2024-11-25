@@ -59,7 +59,7 @@ export default function IconsList() {
   return (
     <div>
       {scrollPosition > 600 && (
-        <Box className="fade-in bg-black bg-opacity-70 rounded-md w-4/5 lg:w-2/3 my-10 flex flex-row justify-around items-center h-[70px] fixed z-10 m-auto bottom-0 left-1/2 transform -translate-x-1/2">
+        <Box className="border-2 border-[red] fade-in bg-black bg-opacity-70 rounded-md w-4/5 lg:w-2/3 my-10 flex flex-row justify-around items-center h-[70px] fixed z-10 m-auto bottom-0 left-1/2 transform -translate-x-1/2">
           <div className="text-white text-2xl font-medium text-center cursive">
             <img src={ilmekSvg} className="w-[80px]" />
           </div>

@@ -31,13 +31,10 @@ function App() {
   return (
     <>
       {isLoaded ? (
-        <div>
-          {/* <Header /> */}
+        <div className="relative"> 
           <Bar />
           <Nav />
-          <OrderNavigation />
-          {/* <BestSeller /> */}
-          {/* <Categories /> */}
+          <OrderNavigation /> 
           <Services />
           <Register />
           <Footer />

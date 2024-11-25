@@ -14,6 +14,7 @@ function MenuList() {
 
     return (
         <Box sx={{//don't work with "width"
+            border : 'solid red 1px',
             maxWidth: 400, flexGrow: 1, display: 'flex', flexDirection: 'row', justifyContent: "space-around", alignItems: 'center',
             '@media (max-width : 990px)': {
                 display: "none"

@@ -13,6 +13,7 @@ import emailjs from "emailjs-com";
 import SuccessedDialog from "./SuccessedDialog";
 import logo from "./images/logo.png";
 import { Mosaic } from "react-loading-indicators";
+import Bar from './Header/Bar'
 
 function Cart() {
   const dispatch = useDispatch();
@@ -83,7 +84,8 @@ function Cart() {
   return (
     <>
       {lazyOpen ? (
-        <div>
+        <div className="pt-[70px]">
+          <Bar/>
           {/* Your cart is empty... */}
           <div className="flex flex-col">
             {cart.length == 0 ? (
