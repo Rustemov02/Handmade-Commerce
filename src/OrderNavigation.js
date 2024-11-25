@@ -20,7 +20,7 @@ function OrderNavigation() {
                 flexDirection: "row",
                 flexWrap: 'wrap', 
             }}>
-                <p className="text-5xl h-[50px] text-center">Məhsullar</p> 
+                <p className="text-5xl h-[50px] text-center font-sans">Məhsullar</p> 
             </div>
 
             <Items />

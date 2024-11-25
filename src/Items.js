@@ -22,7 +22,7 @@ function Items() {
               src={stuf.img}
               className="w-[240px] min-w-[150px] h-[300px] rounded-2xl"
             />
-            <p className="text-2xl my-2">{stuf.name}</p>
+            <p className="text-2xl my-2 font-edu">{stuf.name}</p>
             <div className="w-3/2 flex flex-row justify-between items-center">
             <Rating
               sx={{ color: "#DEAD6F" , fontSize : '30px' }}

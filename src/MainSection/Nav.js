@@ -25,7 +25,7 @@ function Nav() {
           <p className="text-black text-5xl lg:text-8xl text-center font-merri">
             BİR İLMƏK
           </p>
-          <p className="text-black text-xl lg:text-3xl text-center font-sans">
+          <p className="text-black text-xl lg:text-3xl text-center font-edu">
             Sevginin naxışlandığı ilməklər
           </p>
         </div>

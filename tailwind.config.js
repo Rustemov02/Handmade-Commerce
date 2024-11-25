@@ -7,8 +7,10 @@ module.exports = {
   theme: {
     extend : {
       fontFamily: { 
+        sans : ['Open Sans'],
         roboto : ['Roboto'],
-        merri : ["Merriweather"]
+        merri : ["Merriweather"],
+        edu : ["Edu AU VIC WA NT Pre"]
       } 
     }
   },
