@@ -28,8 +28,9 @@ export default function Bar() {
     <div className="flex flex-row items-center justify-center">
       {/* left-1/2 transform -translate-x-1/2 bottom-0 */}
       <Box className="fade-in bg-black bg-opacity-60 rounded-md w-11/12  lg:w-2/3 my-5 flex flex-row justify-around items-center h-[90px] fixed z-10 m-auto left-1/2 transform -translate-x-1/2 top-0  ">
-        
-        <img src={ilmekSvg} onClick={()=>window.location.href = '/'} />
+        <Link to={"/"}>
+          <img src={ilmekSvg} />
+        </Link>
 
         <IconButton
           color="inherit"

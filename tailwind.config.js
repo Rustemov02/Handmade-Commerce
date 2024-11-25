@@ -5,9 +5,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    fontFamily: {
-      sans: ['Chilanka']
-    } 
+    extend : {
+      fontFamily: { 
+        sans : ['Chilanka']
+      } 
+    }
   },
   plugins: [],
 }

@@ -19,13 +19,13 @@ function Nav() {
         style={{ backgroundImage: `url(${amiWallpaper})` }}
         className="relative h-[100%] bg-cover bg-center bg-fixed w-full flex flex-col justify-center  items-center"
       >
-        <div className="absolute inset-0 backdrop-blur-sm bg-black/30"></div>
+        {/* <div className="absolute inset-0 backdrop-blur-sm bg-black/30"></div> */}
 
-        <div className="z-10 flex flex-col justify-center items-center p-5">
-          <p className="text-white text-5xl lg:text-8xl font-medium text-center fontFamily: 'Montserrat ,  cursive' ">
+        <div className="fade-in flex flex-col justify-evenly items-center py-10 w-full bg-white/70 backdrop-blur-md">
+          <p className="text-black text-5xl lg:text-8xl font-medium text-center font-sans">
             BİR İLMƏK
           </p>
-          <p className="text-white text-xl lg:text-3xl text-center">
+          <p className="text-black text-xl lg:text-3xl text-center font-sans">
             Sevginin naxışlandığı ilməklər
           </p>
         </div>
@@ -34,7 +34,7 @@ function Nav() {
           onClick={handleScroll}
           style={{
             zIndex: 10,
-            fontSize: "55px",
+            fontSize: "75px",
             color: "white",
             marginTop: "40px",
             border: "solid white 2px",
