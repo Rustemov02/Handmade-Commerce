@@ -156,7 +156,7 @@ const itemsData = [
     name: "Mini Tısbağa",
     img: miniTisbaga,
     amount: 5,
-    rating: 2,
+    rating: 4,
     type: "Heyvanlar",
     quantity: 1,
     bestSeller: true,
